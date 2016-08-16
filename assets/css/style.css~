@@ -1,0 +1,610 @@
+/* main */
+#content {
+  width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.2em;
+}
+
+#content h2 {
+  line-height: 1.5em;
+}
+
+.modal-dialog
+{
+width:auto !important;
+margin:0px !important;
+}
+/* Add curved borders to various elements */
+
+#contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+}
+
+
+/* Style for the contact form and status messages */
+
+#contactForm, .statusMessage {
+  color: #333;
+  
+}
+
+
+/* The form dimensions */
+
+#contactForm {
+  //width: 40em;
+  height: 33em;
+  //padding: 0 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+}
+
+
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+
+#contactForm.positioned {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+z-index:10000000;
+}
+
+
+/* Dimensions and position of the status messages */
+
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.statusMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* The header at the top of the form */
+
+#contactForm h2 {
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: .05em;
+  margin: 0 0 1em -.75em;
+  padding: 1em;
+  width: 19.5em;  
+  color: #aeb6aa;
+  background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
+  border-bottom: 1px solid #aaa;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;  
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+#contactForm ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contactForm ul li {
+  color: #C6CFDA;
+
+margin-top: 10px;
+margin-bottom: 10px;
+padding: 15px;
+}
+.modal .modal-header .close
+{
+color:#fff !important;
+}
+.modal-content
+{
+color:#fff;
+background:rgb(52, 73, 94) !important;
+}
+ #contactForm label {
+ 
+color:#fff;
+}
+#contactForm input
+{
+ line-height: 1em;
+color:#000;
+}
+
+
+/* The field labels */
+
+label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 28%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+  font-weight: bold;
+}
+
+
+/* The fields */
+
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 67%;
+  font-family: "Georgia", serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  
+  background: #fff;
+}
+
+textarea {
+  height: 13em;
+  line-height: 1.5em;
+  resize: none;
+}
+
+
+/* Place a border around focused fields, and hide the inner shadow */
+
+#contactForm *:focus {
+  border: 1px solid #66f;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+input:valid, textarea:valid {
+  //background: #dfd;
+}
+
+
+/* The Send and Cancel buttons */
+
+input[type="submit"], input[type="button"] {
+  float: right;
+  margin: 2em 1em 0 1em;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #666;
+  
+  color: #fff;
+  background:#DA3F3F;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: bold;
+  opacity:1;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+input[type="submit"]:active, input[type="button"]:active {
+  color: #333;
+  background: #DA3F3F;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+input[type="button"] {
+  background:#DA3F3F;
+}
+
+
+/* Header/footer boxes */
+
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em;
+}
+.modal .modal-header .close
+{
+background-image:none !important;
+background:none !important;
+text-indent:0px !important;
+}
+body {
+    font-family: sans-serif;
+}
+.hide {
+    display: none !important;
+}
+
+.buttons
+{
+width:100% !important;
+}
+#main-app
+{
+margin-top:10px;
+width:100%;
+min-height:900px;
+
+}
+/* buttons */
+.title
+{
+font-weight:bold !important;
+margin-left: 8px;
+color:#fff;
+}
+ .r
+{
+background: #32c5d2;
+padding: 5px 10px;
+width:30px;
+height:30px;
+border: 1px solid;
+text-indent:-9999px;
+
+margin-left: 10px;
+}
+ .b
+{
+text-indent:-9999px;
+background:#8e44ad;
+padding: 5px 10px;
+
+border: 1px solid;
+
+margin-left: 10px;
+}
+ .o
+{
+text-indent:-9999px;
+background:#e7505a;
+padding: 5px 10px;
+
+border: 1px solid;
+
+margin-left: 10px;
+}
+.buttons hr
+{
+padding: 1px 0px !important;
+}
+
+.add-station
+{
+margin:0px;
+padding:10px;
+}
+.buttons > * {
+    width:20%;
+    text-align: center;
+    margin: 10px;
+    float: left;
+    display: inline-block;
+    padding: 10px 15px;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
+    
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.buttons > *:hover {
+    background: rgb(192, 192, 192);
+}
+.buttons .add-room {
+}
+.dd
+{
+color:#fff !important;
+}
+.cancel-station {
+    background: rgb(255, 128, 128);
+margin:0px;
+padding:10px;
+font-weight:bold;
+}
+.cancel-change-station {
+    background: rgb(255, 128, 128);
+}
+.popup_model h3
+{
+font-size:13px;
+font-weight:bold;
+color:#ED6B75;
+
+}
+.popup_model p
+{
+font-size:12px;
+font-weight:500;
+color:#000;
+padding-bottom:20px;
+border-bottom:1px solid #f2f2f2;
+padding-left:17px;
+
+}
+#slidepanel
+{
+height: 650px;
+overflow-y: scroll;
+}
+/* specific */
+#main-app {
+    padding: 0px;
+    padding-right: 0px;
+    max-width: 1200px;
+    background: url(../img/grid_50.png) repeat;
+   background-color: #fff;
+border: 1px solid #f1f1f1;
+box-shadow: 1px 0px 5px #f1f1f1;
+}
+#main-app ul.level-one li {
+    border: 1px solid #f1f1f1;
+background: #ECF0F1 none repeat scroll 0% 0%;
+border-radius: 8px !important;
+box-shadow: 1px 0px 4px #f1f1f1;
+//background: url(../img/grid_50.png) repeat;
+   //background-color: #ccc;
+}
+.level-two1
+{
+height: 80px;
+width: 100% !important;
+position: relative;
+margin: 0px;
+padding: 12px;
+border-bottom: 1px solid #f1f1f1;
+}
+.left_grid .level-two1 li
+{
+float: left;
+padding-left: 20px;
+padding-right: 20px;
+width: 40px;
+height: 40px;
+margin-left: 10px;
+border-radius: 8px !important;
+
+}
+.delete1
+{
+display:none;
+}
+#main-app ul.level-one li:hover > .delete1
+{
+display:block;
+}
+#main-app ul.level-two li.type-one:hover > .delete 
+{
+display:block;
+}
+, #main-app ul.level-two li.type-one:hover > .add_info 
+{
+display:block !important;
+}
+#main-app ul.level-two li.type-one:hover > .add_settings
+{
+display:block !important;
+}
+#main-app ul.level-two li.type-one {
+    background: white;
+    border: 1px solid #f1f1f1;
+}
+#main-app ul.level-two li.type-two {
+    background: black;
+    border: 1px solid black;
+}
+#main-app ul.level-two li.type-three {
+    margin-top: -10px;
+    margin-left: -10px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+}
+#main-app ul.level-two .type-three .delete {
+    top: 10px !important;
+    right: 10px !important;
+}
+
+
+/* general */
+#main-app ul li {
+    margin-left: -1px;
+    margin-top: -1px;
+    position: absolute;
+    list-style: none;
+}
+.left_grid li
+{
+
+z-index:20000;
+}
+ul.level-one, ul.level-two {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+li.preview-holder {
+    display: none;
+}
+
+li .add_settings {
+    position: absolute;
+margin-top: 0px;
+right: 0px;
+background: url("../img/settings.png") no-repeat scroll 0% 0% / 16px 16px;
+width: 16px;
+height: 16px;
+cursor: pointer;
+z-index: 2000;
+//display:none;
+}
+
+li .add_info {
+    position: absolute;
+margin-top: 0px;
+left: 0px;
+background: url("../img/add-text.png") no-repeat scroll 0% 0% / 16px 16px;
+width: 16px;
+height: 16px;
+cursor: pointer;
+z-index: 2000;
+//display:none;
+}
+li .delete {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../img/close_button.png) no-repeat;
+    
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 200;
+}
+#main-app ul.level-one li.ready.active
+{
+background: #95a5a6 !important;
+}
+li .delete1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: url(../img/close_button.png) no-repeat;
+    
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 200;
+}
+.setting_ul
+{
+background: #FFF none repeat scroll 0% 0% !important;
+border: 1px solid rgba(0, 0, 0, 0.2);
+font-size: 12px;
+padding: 0px 0px;
+position: absolute;
+left: 0px;
+top:16px;
+white-space: nowrap;
+z-index: 3;
+transition: opacity 0.218s ease 0s;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+display:none;
+height:auto;
+width:140px;
+}
+.setting_ul li:hover
+{
+background:#ccc !important;
+color:#000 !important;
+}
+.workstation .delete
+{
+display:none;
+}
+.setting_ul li
+{
+color:#000 !important;
+padding-top: 6px;
+padding-left: 10px;
+padding-bottom: 6px;
+width:94% !important;
+float:left !important;
+display:inline-block !important;
+position: relative !important;
+border:none !important;
+border-bottom:1px solid #ccc !important;
+background:none !important;
+
+}
+li .add_settings:hover > ul.setting_ul
+{
+display:block !important;
+}
+ul.level-two li .delete {
+    z-index: 100;
+}
+body.selecting #main-app ul.level-one > li:hover {
+    background: rgb(220, 255, 220);
+}
+body.changing #main-app ul.level-two li:hover {
+    border: 1px solid lightgreen !important;
+    //background: rgb(192, 255, 192);
+}
+
+
+/* autogenerated, but copied */
+ul.level-one [data-sizey="1"] { height:60px !important; }
+ul.level-one [data-sizey="2"] { height:110px !important; }
+ul.level-one [data-sizey="3"] { height:160px !important; }
+ul.level-one [data-sizey="4"] { height:210px !important; }
+ul.level-one [data-sizey="5"] { height:255px !important; }
+ul.level-one [data-sizey="6"] { height:310px !important; }
+ul.level-one [data-sizey="7"] { height:360px !important; }
+ul.level-one [data-sizey="8"] { height:410px !important; }
+ul.level-one [data-sizey="9"] { height:460px !important; }
+ul.level-one [data-sizey="10"] { height:500px !important; }
+ul.level-one [data-sizex="1"] { width:60px !important; }
+ul.level-one [data-sizex="2"] { width:110px !important; }
+ul.level-one [data-sizex="3"] { width:160px !important; }
+ul.level-one [data-sizex="4"] { width:210px !important; }
+ul.level-one [data-sizex="5"] { width:255px !important; }
+ul.level-one [data-sizex="6"] { width:310px !important; }
+ul.level-one [data-sizex="7"] { width:360px !important; }
+ul.level-one [data-sizex="8"] { width:410px !important; }
+ul.level-one [data-sizex="9"] { width:460px !important; }
+ul.level-one [data-sizex="10"] { width:510px !important; }
+
+ul.level-two [data-sizey="1"] { height:40px !important; }
+ul.level-two [data-sizex="1"] { width:40px !important; }
+ul.level-two .type-three[data-sizey="1"] {
+    height: 50px !important;
+}
+ul.level-two .type-three[data-sizex="1"] {
+    width: 50px !important;
+}
